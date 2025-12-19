@@ -6,7 +6,6 @@ from plotly.subplots import make_subplots
 from dash import Dash, dcc, html, Input, Output, dash_table
 import dash_bootstrap_components as dbc
 import simulatore
-from jupyter_dash import JupyterDash
 
 
 
@@ -1025,8 +1024,8 @@ def aggiorna_grafici_cards(anno, coltura):
 
 
 
-if __name__ == '__main__':
-    app.run_jupyter(mode='external') 
+if __name__ == "__main__":
+    app.run(debug=True)
 
 
 
