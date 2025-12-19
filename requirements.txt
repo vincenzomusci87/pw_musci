@@ -6,4 +6,3 @@ dash-bootstrap-components
 jupyter
 jupyter-dash
 openpyxl
-jupyter-server-proxy
