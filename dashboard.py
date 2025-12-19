@@ -97,7 +97,7 @@ df_rese_varieta["Ricavo Albero"] = df_rese_varieta["Ricavo"] / df_rese_varieta["
 
 # DASH
 
-app = dash.Dash(__name__, external_stylesheets=[dbc.themes.DARKLY])
+app = Dash(__name__, external_stylesheets=[dbc.themes.DARKLY])
 
 
 anni_disponibili = sorted(df_clima["Anno"].unique())
