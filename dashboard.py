@@ -58,10 +58,6 @@ df_costi_totali = dati["df_costi_totali"]
 
 # CREAZIONE DATAFRAME DF_RESE E CALCOLI VARI: PROFITTO, RESE, COSTI, RICAVI (TOTALI, PER ETTARO, PER ALBERO) MARGINE PROFITTO, PREZZO MEDIO
 
-
-
-
-
 df_raccolta_somme = df_raccolta.groupby(["Anno","Coltura"]).agg({"Quantità": "sum", "Ricavo": "sum"}).reset_index()
 df_costi_totali_somme = df_costi_totali.groupby(["Anno","Coltura"]).agg({"Costo_dipendenti": "sum", "Costo_materiale": "sum", "Costo_totale_mansione": "sum"}).reset_index()
 
@@ -1030,7 +1026,7 @@ def aggiorna_grafici_cards(anno, coltura):
 
 
 if __name__ == "__main__":
-    app.run(debug=True, port=8050)
+    app.run(debug=True)
 
 
 
