@@ -6,6 +6,7 @@ from plotly.subplots import make_subplots
 from dash import Dash, dcc, html, Input, Output, dash_table
 import dash_bootstrap_components as dbc
 import simulatore
+from jupyter_dash import JupyterDash
 
 
 
@@ -97,7 +98,7 @@ df_rese_varieta["Ricavo Albero"] = df_rese_varieta["Ricavo"] / df_rese_varieta["
 
 # DASH
 
-app = Dash(__name__, external_stylesheets=[dbc.themes.DARKLY])
+app = JupyterDash(__name__, external_stylesheets=[dbc.themes.DARKLY])
 
 
 anni_disponibili = sorted(df_clima["Anno"].unique())
@@ -1024,12 +1025,8 @@ def aggiorna_grafici_cards(anno, coltura):
 
 
 
-import os
-
-port = int(os.environ.get("PORT", 8050))
-
-if __name__ == "__main__":
-    app.run(host="0.0.0.0", port=port, debug=True)
+if __name__ == '__main__':
+    app.run_jupyter(mode='external') 
 
 
 
