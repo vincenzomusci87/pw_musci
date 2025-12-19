@@ -6,3 +6,4 @@ dash-bootstrap-components
 jupyter
 jupyter-dash
 openpyxl
+simulatore
