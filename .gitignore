@@ -1,9 +1,0 @@
-__pycache__/
-.ipynb_checkpoints/
-.env
-.venv/
-*.log
-.anaconda/
-.ipython/
-.jupyter/
-~$*.xlsx
